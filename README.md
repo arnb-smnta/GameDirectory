@@ -1,8 +1,15 @@
-# React + Vite
+This is a react project by Arnab Samanta
+Official Link <a href=""></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is made with RAWG API and open AI API all the resources are freely available online
 
-Currently, two official plugins are available:
+Key Frameworks I have Used to make this Project
+1.Vite+React -Bundler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2.React-Router-Dom-For handling the routes
+
+3.Tailwind Css-For styling the Components
+
+4.ReduxJS & Redux-js toolkit-For handling Data
+
+5.
