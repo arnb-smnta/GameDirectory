@@ -6,6 +6,7 @@ import BrowsePage from "./Components/BrowsePage";
 import { Provider } from "react-redux";
 import appstore from "./Components/ReduxFunctions/appstore";
 import GamePage from "./Components/GamePage";
+import GenrePage from "./Components/GenrePage";
 
 function App() {
   const approuter = createBrowserRouter([
@@ -19,6 +20,7 @@ function App() {
           element: <BrowsePage />,
         },
         { path: "/game", element: <GamePage /> },
+        { path: "/genre", element: <GenrePage /> },
       ],
     },
   ]);

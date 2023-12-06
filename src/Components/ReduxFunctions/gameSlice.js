@@ -5,6 +5,7 @@ const gameSlice = createSlice({
   initialState: {
     games: null,
     gamegenre: null,
+    gameScreenShots: null,
   },
   reducers: {
     gamesdatabase: (state, action) => {
@@ -13,8 +14,12 @@ const gameSlice = createSlice({
     gamesgenreupdate: (state, action) => {
       state.gamegenre = action.payload;
     },
+    updateScreeShot: (state, action) => {
+      state.gameScreenShots = action.payload;
+    },
   },
 });
 
-export const { gamesdatabase, gamesgenreupdate } = gameSlice.actions;
+export const { gamesdatabase, gamesgenreupdate, updateScreeShot } =
+  gameSlice.actions;
 export default gameSlice.reducer;

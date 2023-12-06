@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <div className="absolute border border-black w-[30%]  mt-[8em] bg-white z-40 flex flex-wrap ">
       {genredata.map((genre) => (
-        <MenuItems genre={genre} />
+        <MenuItems genre={genre} key={genre.id} />
       ))}
     </div>
   );

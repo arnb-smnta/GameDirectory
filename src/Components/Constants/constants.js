@@ -1,6 +1,7 @@
 const rawgapikey = import.meta.env.VITE_RAWGAPIKEY;
+export let id;
 export const Rawg_URL = `https://api.rawg.io/api/games?token&key=${rawgapikey}&page_size=100`;
-//export const ScreenShots = `https://api.rawg.io/api/games/${id}/screenshots?token&key=${rawgapikey}`;
+export const ScreenShots = `https://api.rawg.io/api/games/${id}/screenshots?token&key=${rawgapikey}`;
 //export const details = `https://api.rawg.io/api/games/${id}?token&key=${rawgapikey}`;
 //const twitchClientId = "8vpo2k07m6em6xu2takr51asbkq23u";
 //const twitchSecretId = "103512z6xzwzld0xw7tx7mi8vnq3i6";
