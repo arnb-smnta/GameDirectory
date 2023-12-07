@@ -5,18 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import appstore from "./ReduxFunctions/appstore";
 
 const GamePoster = ({ game }) => {
-  const dispatch = useDispatch();
+  let image = game?.background_image;
+  if (!image) image = screenshotupdate(game.id);
 
-  let image = useState(game?.background_image);
-  if (!game.background_image) {
-    screenshotupdate(dispatch, game.id);
-  }
-  let screenshots = useSelector((appstore) => appstore.games.gameScreenShots);
-  if (screenshots) {
-    image = screenshots[0].image;
-  }
-
-  console.log(screenshots);
   return (
     <div
       className="p-2 m-2 w-[18%] border border-black h-[250px] shadow-lg"
