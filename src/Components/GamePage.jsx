@@ -6,6 +6,7 @@ import GamepagePoster from "./GamepagePoster";
 import { Api } from "./helpers/Api";
 import gamevideo from "./helpers/gamevideo";
 import GameVideo from "./GameVideo";
+import GameVideoList from "./GameVideoList";
 const GamePage = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
@@ -14,11 +15,10 @@ const GamePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!gamedata) Api();
-    if (!videodata) gamevideo(id, dispatch);
+    gamevideo(id, dispatch);
   }, []);
   if (!gamedata) return null;
   const game = gamedata.filter((item) => id.includes(item.id));
-  console.log(game);
 
   return (
     <div className="flex p-4">
@@ -37,6 +37,7 @@ const GamePage = () => {
           <div className="flex flex-wrap my-4">
             {game[0].platforms.map((p) => (
               <button
+                key={p.platform.name}
                 type="button"
                 className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
               >
@@ -61,6 +62,7 @@ const GamePage = () => {
         </div>
       </div>
       <div className=" border border-black p-4 m-4 bg-black w-[50%]">
+        {videodata ? <GameVideoList videodata={videodata} /> : null}
         {game[0].short_screenshots.map((shots) => (
           <GamepagePoster shots={shots} key={shots.id} />
         ))}

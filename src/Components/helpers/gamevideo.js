@@ -8,6 +8,7 @@ const gamevideo = async (id, dispatch) => {
 
   const json = await data.json();
   dispatch(updategamevideo(json.results));
+  console.log(data.json);
 };
 
 export default gamevideo;
