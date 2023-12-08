@@ -14,7 +14,7 @@ const GamePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!gamedata) Api();
-    if (!videodata) gamevideo(game.id, dispatch);
+    if (!videodata) gamevideo(id, dispatch);
   }, []);
   if (!gamedata) return null;
   const game = gamedata.filter((item) => id.includes(item.id));

@@ -1,6 +1,7 @@
 import React from "react";
 import ModeButton from "./ModeButton";
 import MenuButton from "./MenuButton";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
       <MenuButton />
 
       <h1>GameStop</h1>
+      <SearchBar />
 
       <ModeButton />
     </div>
