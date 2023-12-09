@@ -11,7 +11,7 @@ const MenuButton = () => {
   return (
     <div className="cursor-pointer">
       <img
-        src="public/5584384.png"
+        src="public/7612954.png"
         alt="menu icon"
         className="h-12"
         onClick={() => genreupdate(dispatch)}

@@ -15,7 +15,8 @@ const SearchBar = () => {
         type="text"
         value={searchtext}
         onChange={(e) => setsearchtext(e.target.value)}
-        className="rounded-xl mx-4"
+        className="rounded-xl mx-4 border border-black pl-4"
+        placeholder="Search your favourite games"
       />
       <button
         type="button"

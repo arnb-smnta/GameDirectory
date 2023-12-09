@@ -17,6 +17,7 @@ const GenrePage = () => {
   if (genredata) {
     filtereddata = genredata.filter((genre) => genre.id === parseInt(id, 10));
   }
+  console.log(filtereddata[0]);
   return (
     <div>
       <h1>{searchParams.get("id")}</h1>

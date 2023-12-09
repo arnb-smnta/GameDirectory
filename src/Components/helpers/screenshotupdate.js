@@ -1,6 +1,8 @@
+import { updateScreeShot } from "../ReduxFunctions/gameSlice";
+
 //import { ScreenShots, id } from "../Constants/constants";
 const rawgapikey = import.meta.env.VITE_RAWGAPIKEY;
-const screenshotupdate = async (id) => {
+const screenshotupdate = async (id, dispatch) => {
   const data = await fetch(
     `https://api.rawg.io/api/games/${id}/screenshots?token&key=${rawgapikey}`
   );
@@ -9,7 +11,7 @@ const screenshotupdate = async (id) => {
   const json = await data.json();
   console.log("screenshot");
   const image = await json.results[0].image;
-  return image;
+  dispatch(updateScreeShot(image));
 };
 
 export default screenshotupdate;

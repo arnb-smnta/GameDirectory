@@ -4,7 +4,7 @@ import VideoBackground from "./VideoBackground";
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className="pt-[6em]">
       <VideoTitle />
       <VideoBackground />
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import appstore from "./ReduxFunctions/appstore";
 import GamepagePoster from "./GamepagePoster";
 import { Api } from "./helpers/Api";
@@ -21,7 +21,7 @@ const GamePage = () => {
   const game = gamedata.filter((item) => id.includes(item.id));
 
   return (
-    <div className="flex p-4">
+    <div className="flex px-4 pb-4 pt-[6em]">
       <div className="border border-red-600 p-4 m-4 w-[50%] h-auto bg-black">
         <h1 className="text-red-600 font-extrabold text-9xl text-center ">
           {game[0].name}
@@ -58,6 +58,23 @@ const GamePage = () => {
                 </button>
               ))}
             </div>
+            <Link to="/cart">
+              <button
+                type="button"
+                className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+              >
+                ADD TO CART
+              </button>
+            </Link>
+            <Link to={`/buy?id=${id}`}>
+              {" "}
+              <button
+                type="button"
+                className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+              >
+                BUY NOW
+              </button>
+            </Link>
           </div>
         </div>
       </div>
