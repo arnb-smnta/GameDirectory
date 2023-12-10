@@ -13,6 +13,7 @@ import GamePage from "./Components/GamePage";
 import GenrePage from "./Components/GenrePage";
 import Cart from "./Components/Cart";
 import BuyPage from "./Components/BuyPage";
+import GenreList from "./Components/GenreList";
 
 function App() {
   const approuter = createBrowserRouter([
@@ -29,6 +30,7 @@ function App() {
         { path: "/genre", element: <GenrePage /> },
         { path: "/cart", element: <Cart /> },
         { path: "/buy", element: <BuyPage /> },
+        { path: "/genrelist", element: <GenreList /> },
       ],
     },
   ]);

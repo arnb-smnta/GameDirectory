@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboveHeader = () => {
   return (
@@ -9,7 +10,9 @@ const AboveHeader = () => {
         className="h-[2em] mx-2"
         alt="Questionmark"
       />
-      <img src="public/Cart.jpg" alt="Cart-icon" className="h-[2em]" />
+      <Link to="/cart">
+        <img src="public/Cart.jpg" alt="Cart-icon" className="h-[2em]" />
+      </Link>
     </div>
   );
 };

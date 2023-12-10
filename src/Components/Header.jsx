@@ -9,14 +9,16 @@ const Header = () => {
   const location = useLocation();
   console.log(location.pathname);
   return (
-    <div className="h-[6em]  w-[100%] fixed">
+    <div className="h-[6em]  w-[100%] fixed z-50">
       <div className="w-[100%] bg-black h-[2em] ">
         <AboveHeader />
       </div>
       <div className="h-[4em] bg-white flex justify-between pt-3 px-4">
         <MenuButton />
 
-        <h1 className="text-blue-600 font-bold text-4xl">GameStop</h1>
+        <Link to="/">
+          <h1 className="text-blue-600 font-bold text-4xl">GameStop</h1>
+        </Link>
         <div>
           {location.pathname === "/browse" ? (
             <SearchBar />

@@ -19,7 +19,7 @@ const GenrePage = () => {
   }
   console.log(filtereddata[0]);
   return (
-    <div>
+    <div className="">
       <h1>{searchParams.get("id")}</h1>
       {filtereddata.length ? (
         <GamePosterList gamelist={filtereddata[0].games} />
